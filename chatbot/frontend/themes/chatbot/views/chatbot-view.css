@@ -3,13 +3,19 @@
 }
 
 .inputLayout {
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.vaadin-text-field-container [part="value"]{
+  background-color: var(--lumo-tint-70pct);
 }
 
 .MessageList {
-  overflow-y: scroll;
-  width: 100%;
+  overflow-y: auto;
+  width: 90%;
   height: 90%;
+  padding: 0 5%;
 }
 
 .MessageList-name {
@@ -19,13 +25,14 @@
 .MessageList-bubble {
   margin: .5em;
   padding: 1em;
-  border-radius: var(--lumo-border-radius-s);
-  background-color: var(--lumo-shade-20pct);
+  border-radius: var(--lumo-border-radius);
+  background-color: var(--lumo-shade-10pct);
+  color: var(--lumo-shade-90pct);
 }
 
 .MessageList-bubble-currentUser {
   background-color: var(--lumo-primary-text-color);
-  color: var(--lumo-base-color);
+  color: var(--lumo-tertiary-text-color);
 }
 
 .MessageList-avatar {
@@ -45,3 +52,4 @@
 .MessageList-row-currentUser {
   flex-direction: row-reverse;
 }
+

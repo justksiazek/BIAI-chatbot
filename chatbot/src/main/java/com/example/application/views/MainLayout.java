@@ -7,8 +7,11 @@ import com.vaadin.flow.component.ComponentUtil;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.avatar.Avatar;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -22,37 +25,44 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.PageTitle;
 import com.example.application.views.MainLayout;
 import com.example.application.views.chatbot.ChatbotView;
+import com.vaadin.flow.theme.lumo.Lumo;
 
 /**
  * The main view is a top-level placeholder for other views.
  */
+@CssImport("./themes/chatbot/styles.css")
 @PWA(name = "chatbot", shortName = "chatbot", enableInstallPrompt = false)
-@Theme(themeFolder = "chatbot")
+@Theme(value = Lumo.class)
 public class MainLayout extends AppLayout {
 
-    private final Tabs menu;
+    //private final Tabs menu;
     private H1 viewTitle;
 
     public MainLayout() {
         setPrimarySection(Section.DRAWER);
         addToNavbar(true, createHeaderContent());
-        menu = createMenu();
-        addToDrawer(createDrawerContent(menu));
+        //menu = createMenu();
+        //addToDrawer(createDrawerContent(menu));
     }
 
     private Component createHeaderContent() {
         HorizontalLayout layout = new HorizontalLayout();
         layout.setClassName("sidemenu-header");
-        layout.getThemeList().set("dark", true);
+        //layout.getThemeList().set("dark", true);
         layout.setWidthFull();
         layout.setSpacing(false);
         layout.setAlignItems(FlexComponent.Alignment.CENTER);
-        layout.add(new DrawerToggle());
-        viewTitle = new H1();
+        //layout.add(new DrawerToggle());
+        Icon icon = new Icon(VaadinIcon.CHAT);
+        icon.setSize("50px");
+        icon.setColor("white");
+        layout.add(icon);
+        viewTitle = new H1("Chatbot");
         layout.add(viewTitle);
-        Avatar avatar = new Avatar();
-        avatar.addClassNames("ms-auto", "me-m");
-        layout.add(avatar);
+
+        //Avatar avatar = new Avatar();
+        //avatar.addClassNames("ms-auto", "me-m");
+        //layout.add(avatar);
         return layout;
     }
 
@@ -72,7 +82,7 @@ public class MainLayout extends AppLayout {
         layout.add(logoLayout, menu);
         return layout;
     }
-
+/*
     private Tabs createMenu() {
         final Tabs tabs = new Tabs();
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
@@ -108,5 +118,5 @@ public class MainLayout extends AppLayout {
     private String getCurrentPageTitle() {
         PageTitle title = getContent().getClass().getAnnotation(PageTitle.class);
         return title == null ? "" : title.value();
-    }
+    }*/
 }

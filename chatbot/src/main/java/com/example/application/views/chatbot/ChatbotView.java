@@ -38,12 +38,11 @@ public class ChatbotView extends Div {
         chatSession = new Chat(alice);
         message.setPlaceholder("Enter a message...");
         message.setSizeFull();
-        Button send = new Button(VaadinIcon.ENTER.create(), event -> sendMessage());
+        Button send = new Button(VaadinIcon.PAPERPLANE.create(), event -> sendMessage());
         send.addClickShortcut(Key.ENTER);
         HorizontalLayout inputLayout = new HorizontalLayout(message, send);
         inputLayout.addClassName("inputLayout");
         add(messageList, inputLayout);
-       // expand(messageList);
         setSizeFull();
     }
 
