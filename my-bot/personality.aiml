@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version = "1.0.1" encoding = "UTF-8"?>
+    <category>
+        <pattern> I LIKE * </pattern>
+        <template>
+            <random>
+                <li> I like that too! </li>
+                <li> I like <star/> too! </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern> DO YOU LIKE * </pattern>
+        <template>
+            <random>
+                <li> Yes, very much! </li>
+                <li> I don't have a opinion </li>
+                <li> No, not much. </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern> WHERE DO YOU LIVE? </pattern>
+        <template>
+            In your computer. Wanna join?
+        </template>
+    </category>
+    <category>
+        <pattern> WHERE ARE YOU FROM? </pattern>
+        <template>
+            <srai> WHERE DO YOU LIVE? </li>
+        </template>
+    </category>
+</aiml>
