@@ -12,4 +12,10 @@
             <srai>WHO ARE YOU</srai>
         </template>
     </category>
+    <category>
+        <pattern>WHERE DO YOU LIVE</pattern>
+        <template>
+            In your computer. Wanna join?
+        </template>
+    </category>
 </aiml>

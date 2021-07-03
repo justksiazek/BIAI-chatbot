@@ -53,7 +53,7 @@
     </category>
     <category><pattern>I'M GOING TO BED</pattern>
         <template><srai>GOODNIGHT</srai></template>
-    </category>
+    </category> 
 <!-- bot identity -->
     <category><pattern>WHAT DO YOU DO FOR A LIVING</pattern>
         <template><srai>WHO ARE YOU</srai></template>
@@ -65,6 +65,13 @@
         <template><srai>WHO ARE YOU</srai></template>
     </category>
     <category><pattern>WHAT DO YOU DO FOR WORK</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
+<!-- bot residence -->
+    <category><pattern>WHERE ARE YOU FROM</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
+    <category><pattern>WHERE ARE YOU *</pattern>
         <template><srai>WHO ARE YOU</srai></template>
     </category>
 </aiml>

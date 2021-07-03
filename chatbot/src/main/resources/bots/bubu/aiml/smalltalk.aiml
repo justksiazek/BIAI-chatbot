@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>* THE WEATHER</pattern>
+        <template>
+            <random>
+                <li> You google it, I'm not that smart. </li>
+                <li> Yout tell me, you're the one who has windows. </li>
+            </random>
+        </template>
+    </category>
+    <category>
+    </category>
+</aiml>
