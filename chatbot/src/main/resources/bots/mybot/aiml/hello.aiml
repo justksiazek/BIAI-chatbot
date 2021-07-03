@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <aiml version = "1.0.1" encoding = "UTF-8"?>
     <category>
-        <pattern> HELLO # </pattern>
+        <pattern> HELLO </pattern>
             <template>
                 <random>
                     <li> Hello! </li>
@@ -18,11 +18,23 @@
     <category>
         <pattern> HI # </pattern>
         <template>
-            <srai> HELLO </srai> <!-- HELLO # ???-->
+            <srai> HELLO </srai>
         </template>
     </category>
     <category>
         <pattern> GOOD MORNING # </pattern>
+        <template>
+            <srai> HELLO </srai>
+        </template>
+    </category>
+    <category>
+        <pattern> HEY # </pattern>
+        <template>
+            <srai> HELLO </srai>
+        </template>
+    </category>
+    <category>
+        <pattern> WHATS UP # </pattern>
         <template>
             <srai> HELLO </srai>
         </template>

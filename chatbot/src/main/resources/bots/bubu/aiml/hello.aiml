@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- greeting, goodbyes and everything in between -->
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <random>
+                <li> Hello! </li>
+                <li> Hi! </li>
+                <li> Hi! How are you? </li>
+                <li> Hello! How are you? </li>
+                <li> Hi! Nice to meet you! </li>
+                <li> Hello! Nice to meet you! </li>
+                <li> Hello! I'm a small bot! </li>
+                <li> Hi! I'm a small bot! </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>BYE</pattern>
+        <template>
+            <random>
+                <li> Bye bye! </li>
+                <li> See you soon! </li>
+                <li> Goodbye. </li>
+                <li> Have a nice day. </li>
+                <li> Bye, I'm gonna miss you! </li>
+                <li> Until the next time! </li>
+                <li> Talk to you later! </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>GOODNIGHT</pattern>
+        <template>
+            <random>
+                <li> Sleep tight, don't let the bed bugs bite! <srai>BYE</srai></li>
+                <li> Sweet dreams. <srai>BYE</srai></li>
+                <li> Good night. <srai>BYE</srai></li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>AHOY</pattern>
+        <template>
+            Ay ay captain!
+        </template>
+    </category>
+    <category>
+        <pattern>NICE TO * YOU</pattern>
+        <template>
+            Nice to <star> you too.
+        </template>
+    </category>
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>
+            I'm good. What aboyt you?
+        </template>
+    </category>
+</aiml>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- greetings -->
+    <category><pattern>HELLO *</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category><pattern>HI *</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category><pattern>HI</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category><pattern>GOOD *</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category><pattern>HEY</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category><pattern>HEY *</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category><pattern>WHATS UP</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+<!-- goodbyes -->
+    <category><pattern>GOOD BYE</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    <category><pattern>GOODBYE</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    <category><pattern>BYE *</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    <category><pattern>I * TO GO</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    <category><pattern>I * TO LEAVE</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+<!-- goodnights -->
+    <category><pattern>GOOD NIGHT</pattern>
+        <template><srai>GOODNIGHT</srai></template>
+    </category>
+    <category><pattern>NIGHTY NIGHT</pattern>
+        <template><srai>GOODNIGHT</srai></template>
+    </category>
+    <category><pattern>NIGHTY NIGHT</pattern>
+        <template><srai>GOODNIGHT</srai></template>
+    </category>
+    <category><pattern>I'M GOING TO SLEEP</pattern>
+        <template><srai>GOODNIGHT</srai></template>
+    </category>
+    <category><pattern>I'M GOING TO BED</pattern>
+        <template><srai>GOODNIGHT</srai></template>
+    </category>
+<!-- bot identity -->
+    <category><pattern>WHAT DO YOU DO FOR A LIVING</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR OCCUPATION</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
+    <category><pattern>WHERE DO YOU WORK</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU DO FOR WORK</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
+</aiml>

@@ -53,7 +53,7 @@ public class ChatbotView extends Div {
         executorService.schedule(() -> {
                     String answer = chatSession.multisentenceRespond(text);
                     ui.access(() -> messageList.addMessage(
-                            "Alice", new Avataaar("Alice2"), answer, false));
+                            "Mybot", new Avataaar("Alice2"), answer, false));
                 },new Random().ints(1000, 3000).findFirst().getAsInt(),
                 TimeUnit.MILLISECONDS);
     }
