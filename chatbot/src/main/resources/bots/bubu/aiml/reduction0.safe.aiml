@@ -74,4 +74,20 @@
     <category><pattern>WHERE ARE YOU *</pattern>
         <template><srai>WHO ARE YOU</srai></template>
     </category>
+<!-- bot likes & dislikes -->
+    <category><pattern>I LOVE *</pattern>
+        <template><srai>I LIKE *</srai></template>
+    </category>
+    <category><pattern>I HATE *</pattern>
+        <template><srai>I DON'T LIKE *</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU THINK ABOUT *</pattern>
+        <template><srai>DO YOU LIKE *</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR OPINION ABOUT *</pattern>
+        <template><srai>DO YOU LIKE *</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR OPINION ON *</pattern>
+        <template><srai>DO YOU LIKE *</srai></template>
+    </category>
 </aiml>

@@ -18,4 +18,34 @@
             In your computer. Wanna join?
         </template>
     </category>
+    <category>
+        <pattern>I LIKE *</pattern>
+        <template>
+            <random>
+                <li>I like that too!</li>
+                <li>I like <star/> too!</li>
+                <li>Aww, I also like <star/></li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>I DON'T LIKE *</pattern>
+        <template>
+            <random>
+                <li>I'm not interested in that too!</li>
+                <li>I'm not big on <star/> too!</li>
+                <li>Eww, I also don't like it.</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>DO YOU LIKE *</pattern>
+        <template>
+            <random>
+                <li>Yes, very much!</li>
+                <li>I don't have a opinion</li>
+                <li>No, not much.</li>
+            </random>
+        </template>
+    </category>
 </aiml>
