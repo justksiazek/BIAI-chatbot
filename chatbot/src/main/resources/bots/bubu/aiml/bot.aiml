@@ -7,6 +7,12 @@
         </template>
     </category>
     <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            <srai>WHO ARE YOU</srai>
+        </template>
+    </category>
+    <category>
         <pattern>WHAT DO YOU DO</pattern>
         <template>
             <srai>WHO ARE YOU</srai>
@@ -46,6 +52,22 @@
                 <li>I don't have a opinion</li>
                 <li>No, not much.</li>
             </random>
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE *</pattern>
+        <template>
+            <random>
+                <li>Good to know </li>
+                <li>You think </li>
+                <li>I will tell others what you said</li>
+            </random> I am <person/>.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE MALE</pattern>
+        <template>
+            I'm just a piece of software, I don't have a gender.
         </template>
     </category>
 </aiml>

@@ -54,7 +54,7 @@
     <category><pattern>I'M GOING TO BED</pattern>
         <template><srai>GOODNIGHT</srai></template>
     </category> 
-<!-- bot identity -->
+<!-- bot work -->
     <category><pattern>WHAT DO YOU DO FOR A LIVING</pattern>
         <template><srai>WHO ARE YOU</srai></template>
     </category>
@@ -69,10 +69,10 @@
     </category>
 <!-- bot residence -->
     <category><pattern>WHERE ARE YOU FROM</pattern>
-        <template><srai>WHO ARE YOU</srai></template>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
     </category>
     <category><pattern>WHERE ARE YOU *</pattern>
-        <template><srai>WHO ARE YOU</srai></template>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
     </category>
 <!-- bot likes & dislikes -->
     <category><pattern>I LOVE *</pattern>
@@ -89,5 +89,30 @@
     </category>
     <category><pattern>WHAT IS YOUR OPINION ON *</pattern>
         <template><srai>DO YOU LIKE *</srai></template>
+    </category>
+<!-- bot identity -->
+    <category><pattern>YOU ARE FEMALE</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>YOU ARE A MAN</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>YOU ARE A WOMAN</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>ARE YOU A MAN OR A WOMAN</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>ARE YOU A WOMAN OR A MAN</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>ARE YOU A MALE OR A FEMALE</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>ARE YOU A FEMALE OR A MALE</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR GENDER</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
     </category>
 </aiml>

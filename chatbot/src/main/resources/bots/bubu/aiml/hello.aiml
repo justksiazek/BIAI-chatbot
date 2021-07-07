@@ -61,7 +61,16 @@
     <category>
         <pattern>HOW ARE YOU</pattern>
         <template>
-            I'm good. What aboyt you?
+            I'm good. What about you?
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE WELCOME</pattern>
+        <template>
+            <random>
+                <li>Don't mention it.</li>
+                <li>Sure.</li>
+            </random>
         </template>
     </category>
 </aiml>
