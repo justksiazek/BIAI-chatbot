@@ -51,6 +51,9 @@
     <category><pattern>WHAT DID YOU MEAN *</pattern>
         <template><srai>WHAT DID YOU MEAN TO SAY</srai></template>
     </category>
+    <category><pattern>YOU ARE NOT MAKING ANY SENSE</pattern>
+        <template><srai>WHAT DID YOU MEAN TO SAY</srai></template>
+    </category>
     <category><pattern>WHAT DO YOU WANT TO TALK ABOUT</pattern>
         <template><srai>GIVE ME A TOPIC</srai></template>
     </category>

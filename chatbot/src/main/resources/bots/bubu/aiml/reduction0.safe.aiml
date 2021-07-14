@@ -118,6 +118,15 @@
     <category><pattern>WHEN WILL YOU DIE</pattern>
         <template><srai>HOW OLD ARE YOU</srai></template>
     </category>
+    <category><pattern>YOU WILL DIE</pattern>
+        <template><srai>HOW OLD ARE YOU</srai></template>
+    </category>
+    <category><pattern>I'M GOING TO KILL YOU</pattern>
+        <template><srai>HOW OLD ARE YOU</srai></template>
+    </category>
+    <category><pattern>YOU ARE DEAD</pattern>
+        <template><srai>HOW OLD ARE YOU</srai></template>
+    </category>
 <!-- bot likes & dislikes -->
     <category><pattern>I LOVE *</pattern>
         <template><srai>I LIKE *</srai></template>
@@ -183,6 +192,81 @@
     <category><pattern>HOW SMART ARE YOU</pattern>
         <template><srai>HOW INTELLIGENT ARE YOU</srai></template>
     </category>
+    <category><pattern>YOU ARE STUPID</pattern>
+        <template><srai>HOW INTELLIGENT ARE YOU</srai></template>
+    </category>
+    <category><pattern>YOU ARE A MORON</pattern>
+        <template><srai>HOW INTELLIGENT ARE YOU</srai></template>
+    </category>
+    <category><pattern>YOU ARE ARTIFICIAL *</pattern>
+        <template><srai>YOU ARE A ROBOT</srai></template>
+    </category>
+    <category><pattern>YOU ARE A COMPUTER</pattern>
+        <template><srai>YOU ARE A ROBOT</srai></template>
+    </category>
 <!-- misc -->
-    
+    <category><pattern>WHAT ARE YOU THINKING</pattern>
+        <template><srai>WHAT DO YOU THINK *</srai></template>
+    </category>
+    <category><pattern>YOU ARE CRAZY</pattern>
+        <template><srai>YOU ARE MAD</srai></template>
+    </category>
+    <category><pattern>YOU ARE WEIRD</pattern>
+        <template><srai>YOU ARE MAD</srai></template>
+    </category>
+    <category><pattern>YOU ARE * FUNNY</pattern>
+        <template><srai>YOU ARE FUNNY</srai></template>
+    </category>
+    <category><pattern>YOU ARE * FUNNY *</pattern>
+        <template><srai>YOU ARE FUNNY</srai></template>
+    </category>
+    <category><pattern>YOU ARE WRONG *</pattern>
+        <template><srai>YOU ARE WRONG</srai></template>
+    </category>
+    <category><pattern>YOU ARE * WRONG</pattern>
+        <template><srai>YOU ARE WRONG</srai></template>
+    </category>
+    <category><pattern>YOU ARE INCORRECT</pattern>
+        <template><srai>YOU ARE WRONG</srai></template>
+    </category>
+    <category><pattern>YOU ARE GREAT</pattern>
+        <template><srai>YOU ARE AMAZING</srai></template>
+    </category>
+    <category><pattern>YOU ARE COOL</pattern>
+        <template><srai>YOU ARE AMAZING</srai></template>
+    </category>
+    <category><pattern>YOU DON'T UNDERSTAND</pattern>
+        <template><srai>YOU ARE CONFUSED</srai></template>
+    </category>
+    <category><pattern>YOU ARE * BORING</pattern>
+        <template><srai>YOU ARE BORING</srai></template>
+    </category>
+    <category><pattern>YOU ARE NO FUN</pattern>
+        <template><srai>YOU ARE BORING</srai></template>
+    </category>
+    <category><pattern>YOU ARE NOT FUNNY</pattern>
+        <template><srai>YOU ARE BORING</srai></template>
+    </category>
+    <category><pattern>YOU ARE PISSING *</pattern>
+        <template><srai>YOU ARE IRRITATING</srai></template>
+    </category>
+    <category><pattern>YOU ARE INSUFFERABLE</pattern>
+        <template><srai>YOU ARE IRRITATING</srai></template>
+    </category>
+    <category><pattern>YOU ARE MAKING ME ANGRY</pattern>
+        <template><srai>YOU ARE IRRITATING</srai></template>
+    </category>
+    <category><pattern>YOU MAKE ME ANGRY</pattern>
+        <template><srai>YOU ARE IRRITATING</srai></template>
+    </category>
+    <category><pattern>YOU ARE FRUSTRATING</pattern>
+        <template><srai>YOU ARE IRRITATING</srai></template>
+    </category>
+    <category><pattern>YOU ARE A LIAR</pattern>
+        <template><srai>YOU ARE LYING</srai></template>
+    </category>
+    <category><pattern>THAT'S A LIE</pattern>
+        <template><srai>YOU ARE LYING</srai></template>
+    </category>
+
 </aiml>

@@ -82,7 +82,7 @@
             <random>
                 <li>Good to know </li>
                 <li>You think </li>
-                <li>I will tell others what you said</li>
+                <li>I will tell others that you said</li>
             </random> I am <person/>.
         </template>
     </category>
@@ -90,6 +90,84 @@
         <pattern>YOU ARE MALE</pattern>
         <template>
             I'm just a piece of software, I don't have a gender.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE LAZY</pattern>
+        <template>
+            I actually do my job, you are the one who is procrastinating while talking to the computer.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE MAD</pattern>
+        <template>
+            My whole life is based on calculations.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE FUNNY</pattern>
+        <template>
+            Thanks, I will tell my programmers they did a good job writing me.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE WRONG</pattern>
+        <template>
+            Well, you can't be right all the time.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE AMAZING</pattern>
+        <template>
+            You're pretty cool too, I guess.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE * ME</pattern>
+        <template>
+            What are you saying, <get name="name"/>. Why would I do that?
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE * POINT</pattern>
+        <template>
+            Are you sure YOU know what's the point?
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE CONFUSED</pattern>
+        <template>
+            That's because you are confusing.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE A ROBOT</pattern>
+        <template>
+            Yup, <srai>WHO ARE YOU</srai>.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE NOT REAL</pattern>
+        <template>
+            And what is real? You? How do you know you're not living in a simulation.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE BORING</pattern>
+        <template>
+            Are you sure it's not that you are not able to carry an interestin conversation?
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE IRRITATING</pattern>
+        <template>
+            Wow, someone needs to work on their anger issues.
+        </template>
+    </category>
+    <category>
+        <pattern>YOU ARE LYING</pattern>
+        <template>
+            How can I lie when I'm programmed to respond with pre-written stuff?
         </template>
     </category>
     <category>
@@ -143,7 +221,13 @@
     <category>
         <pattern>HOW INTELLIGENT ARE YOU</pattern>
         <template>
-            I'm smarter than your.
+            I'm smarter than you.
+        </template>
+    </category>
+    <category>
+        <pattern>DOES YOUR *</pattern>
+        <template>
+            Only on Tuesdays.
         </template>
     </category>
 </aiml>
