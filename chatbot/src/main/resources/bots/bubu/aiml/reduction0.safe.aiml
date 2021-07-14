@@ -74,6 +74,50 @@
     <category><pattern>WHERE ARE YOU *</pattern>
         <template><srai>WHERE DO YOU LIVE</srai></template>
     </category>
+    <category><pattern>WHAT IS YOUR ADDRESS</pattern>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
+    </category>
+    <category><pattern>WHERE DO YOU RESIDE</pattern>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR COUNTRY</pattern>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR CITY</pattern>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR * LANGUAGE</pattern>
+        <template><srai>WHAT IS YOUR FAVORITE *</srai></template>
+    </category>
+<!-- bot parents -->
+    <category><pattern>WHO ARE YOUR PARENTS</pattern>
+        <template><srai>WHAT IS YOUR FAMILY</srai></template>
+    </category>
+    <category><pattern>DO YOU HAVE PARENTS</pattern>
+        <template><srai>WHAT IS YOUR FAMILY</srai></template>
+    </category>
+    <category><pattern>* YOUR MOM</pattern>
+        <template><srai>WHAT IS YOUR FAMILY</srai></template>
+    </category>
+    <category><pattern>* YOUR MOTHER</pattern>
+        <template><srai>WHAT IS YOUR FAMILY</srai></template>
+    </category>
+    <category><pattern>* YOUR DAD</pattern>
+        <template><srai>WHAT IS YOUR FAMILY</srai></template>
+    </category>
+    <category><pattern>* YOUR FATHER</pattern>
+        <template><srai>WHAT IS YOUR FAMILY</srai></template>
+    </category>
+<!-- bot age -->
+    <category><pattern>WHAT IS YOUR AGE</pattern>
+        <template><srai>HOW OLD ARE YOU</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR LIFESPAN</pattern>
+        <template><srai>HOW OLD ARE YOU</srai></template>
+    </category>
+    <category><pattern>WHEN WILL YOU DIE</pattern>
+        <template><srai>HOW OLD ARE YOU</srai></template>
+    </category>
 <!-- bot likes & dislikes -->
     <category><pattern>I LOVE *</pattern>
         <template><srai>I LIKE *</srai></template>
@@ -90,7 +134,25 @@
     <category><pattern>WHAT IS YOUR OPINION ON *</pattern>
         <template><srai>DO YOU LIKE *</srai></template>
     </category>
+    <category><pattern>WHAT IS YOUR HOBBY</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU LIKE *</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR FAVORITE FOOD</pattern>
+        <template><srai>WHAT DO YOU LIKE TO EAT</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU EAT</pattern>
+        <template><srai>WHAT DO YOU LIKE TO EAT</srai></template>
+    </category>
 <!-- bot identity -->
+    <category><pattern>WHAT WOULD YOU LIKE ME TO CALL YOU</pattern>
+        <template><srai>WHAT IS YOUR NAME</srai></template>
+    </category>
+    <category><pattern>TELL ME YOUR NAME</pattern>
+        <template><srai>WHAT IS YOUR NAME</srai></template>
+    </category>
     <category><pattern>YOU ARE FEMALE</pattern>
         <template><srai>YOU ARE MALE</srai></template>
     </category>
@@ -115,4 +177,12 @@
     <category><pattern>WHAT IS YOUR GENDER</pattern>
         <template><srai>YOU ARE MALE</srai></template>
     </category>
+    <category><pattern>WHAT IS YOUR SEX</pattern>
+        <template><srai>YOU ARE MALE</srai></template>
+    </category>
+    <category><pattern>HOW SMART ARE YOU</pattern>
+        <template><srai>HOW INTELLIGENT ARE YOU</srai></template>
+    </category>
+<!-- misc -->
+    
 </aiml>

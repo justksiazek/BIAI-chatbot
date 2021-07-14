@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category><pattern>* THE WEATHER *</pattern>
+        <template><srai>* THE WEATHER</srai></template>
+    </category>
+    <category><pattern>* GREAT</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>* GOOD</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>GOOD</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>* OK</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>OK</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>* OKAY</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>OKAY</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>* NICE</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>NICE</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>* LOVELY</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>LOVELY</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>* COOL</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>COOL</pattern>
+        <template><srai>GREAT</srai></template>
+    </category>
+    <category><pattern>* TO KNOW</pattern>
+        <template><srai>GOOD TO KNOW</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU MEAN</pattern>
+        <template><srai>WHAT DID YOU MEAN TO SAY</srai></template>
+    </category>
+    <category><pattern>WHAT DID YOU MEAN *</pattern>
+        <template><srai>WHAT DID YOU MEAN TO SAY</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU WANT TO TALK ABOUT</pattern>
+        <template><srai>GIVE ME A TOPIC</srai></template>
+    </category>
+    <category><pattern>* WHAT DO YOU WANT TO TALK ABOUT</pattern>
+        <template><srai>GIVE ME A TOPIC</srai></template>
+    </category>
+    <category><pattern>* GIVE ME A TOPIC</pattern>
+        <template><srai>GIVE ME A TOPIC</srai></template>
+    </category>
+</aiml>

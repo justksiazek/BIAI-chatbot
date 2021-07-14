@@ -1,6 +1,7 @@
 package com.example.application.views.chatbot;
 
 import com.example.application.model.MessageList;
+import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.UI;
@@ -13,6 +14,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.PageTitle;
 import com.example.application.views.MainLayout;
 import com.vaadin.flow.router.RouteAlias;
+import com.vaadin.flow.shared.communication.PushMode;
 import org.alicebot.ab.Bot;
 import org.alicebot.ab.Chat;
 import org.vaadin.artur.Avataaar;
@@ -46,16 +48,23 @@ public class ChatbotView extends Div {
         setSizeFull();
     }
 
+    @Override
+    protected void onAttach(AttachEvent attachEvent) {
+        ui.getPushConfiguration().setPushMode(PushMode.AUTOMATIC);
+    }
+
     private void sendMessage() {
         String text = message.getValue();
-        messageList.addMessage("You", new Avataaar("Name"), text, true);
-        message.clear();
-        executorService.schedule(() -> {
-                    String answer = chatSession.multisentenceRespond(text);
-                    ui.access(() -> messageList.addMessage(
-                            "Mybot", new Avataaar("Alice2"), answer, false));
-                },new Random().ints(1000, 3000).findFirst().getAsInt(),
-                TimeUnit.MILLISECONDS);
+        if (!text.trim().isEmpty()) {
+            messageList.addMessage("You", new Avataaar("Name"), text, true);
+            message.clear();
+
+            executorService.schedule(() -> {
+                String answer = chatSession.multisentenceRespond(text);
+                ui.access(() -> messageList.addMessage(
+                        "Chatty", new Avataaar("Alice2"), answer.isEmpty() ? "..." : answer, false));
+            }, new Random().ints(1000, 3000).findFirst().getAsInt(), TimeUnit.MILLISECONDS);
+        }
     }
 
 }

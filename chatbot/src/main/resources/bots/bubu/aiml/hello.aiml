@@ -73,4 +73,10 @@
             </random>
         </template>
     </category>
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>
+            I'm Chatty Chatbot.
+        </template>
+    </category>
 </aiml>

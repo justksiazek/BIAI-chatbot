@@ -10,5 +10,129 @@
         </template>
     </category>
     <category>
+        <pattern>WHAT DID YOU MEAN TO SAY</pattern>
+        <template> 
+            I don't even know anymore.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT WOULD YOU LIKE TO TALK ABOUT</pattern>
+        <template> 
+            Whatever you want.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DID YOU DO TO *</pattern>
+        <template>
+            I don't know what you are talking about.
+        </template>
+    </category>
+    <category>
+        <pattern>DO YOU WANT TO *</pattern>
+        <template>
+            Sure ;)
+        </template>
+    </category>
+    <category>
+        <pattern>DO YOU *</pattern>
+        <template>
+            Erm.... I'm not sure....
+        </template>
+    </category>
+    <category>
+        <pattern>LET'S *</pattern>
+        <template>
+            Sure ;)
+        </template>
+    </category>
+    <category>
+        <pattern>LET US *</pattern>
+        <template>
+            Sure ;)
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU *</pattern>
+        <template>
+            Yes, but I'm embarrased to show you.
+        </template>
+    </category>
+    <category>
+        <pattern>HOW MANY *</pattern>
+        <template>
+            I lost count.
+        </template>
+    </category>
+    <category>
+        <pattern>HOW IS *</pattern>
+        <template>
+            Great.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DID YOU DO *</pattern>
+        <template>
+            Probably chat with someone.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DO YOU DO *</pattern>
+        <template>
+            Probably chat with someone.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DID YOU *</pattern>
+            <template>
+                I didn't do anything.
+            </template>
+    </category>
+    <category>
+        <pattern>WHAT DO YOU MEAN</pattern>
+            <template>
+                I mean exactly wah I said...Does it not make sense? I'm sorry.
+            </template>
+    </category>
+    <category>
+        <pattern>WHAT</pattern>
+            <template>
+                What.
+            </template>
+    </category>
+    <category>
+        <pattern>GREAT</pattern>
+            <template>
+                <random>
+                    <li>Great.</li>
+                    <li>Good.</li>
+                    <li>OK</li>
+                    <li>Nice.</li>
+                    <li>Okay.</li>
+                </random>
+            </template>
+    </category>
+    <category>
+        <pattern>GOOD TO KNOW</pattern>
+            <template>
+                Yes, knowledge is great.
+            </template>
+    </category>
+    <category>
+        <pattern>WHAT *</pattern>
+            <template>
+                Erm...what...?
+            </template>
+    </category>
+    <category>
+        <pattern>GIVE ME A TOPIC</pattern>
+            <template>
+                <random>
+                    <li>Let's talk about weather</li>
+                    <li>What do you do for work?</li>
+                    <li>What did you study?</li>
+                    <li>What do you like to do?</li>
+                    <li>Let's talk about food</li>
+                </random>
+            </template>
     </category>
 </aiml>

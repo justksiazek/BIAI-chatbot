@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>I DO NOT LIKE *</pattern>
+        <template>
+            That's cool.
+        </template>
+    </category>
+    <category>
+        <pattern>I AM *</pattern>
+        <template>
+            Good to know.
+        </template>
+    </category>
+    <category>
+        <pattern>I COULD GIVE YOU *</pattern>
+        <template>
+            <random>
+                <li>And then what?</li>
+                <li>You could, but should you?</li>
+                <li>That's cool, I guess...</li>
+                <li>Then I guess I should take it.</li>
+            </random>
+        </template>
+    </category>
+    
+</aiml>
