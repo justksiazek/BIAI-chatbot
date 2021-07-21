@@ -219,6 +219,24 @@
         </template>
     </category>
     <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>
+            I'm Chatty The Chatterbot.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS YOUR HEIGHT</pattern>
+        <template>
+            Around 2000 lines of code.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS YOUR WEIGHT</pattern>
+        <template>
+            Less than 1MB.
+        </template>
+    </category>
+    <category>
         <pattern>HOW INTELLIGENT ARE YOU</pattern>
         <template>
             I'm smarter than you.
@@ -228,6 +246,18 @@
         <pattern>DOES YOUR *</pattern>
         <template>
             Only on Tuesdays.
+        </template>
+    </category>
+    <category>
+        <pattern>DID YOU *</pattern>
+        <template>
+            What does it matter?
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT ARE YOUR *</pattern>
+        <template>
+            They are a secret.
         </template>
     </category>
 </aiml>
