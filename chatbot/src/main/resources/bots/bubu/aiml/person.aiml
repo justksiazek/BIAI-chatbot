@@ -1,15 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
     <category>
+        <pattern>I LIKE *</pattern>
+        <template>
+            <random>
+                <li>I like that too!</li>
+                <li>I like <star/> too!</li>
+                <li>Aww, I also like <star/></li>
+            </random>
+        </template>
+    </category>
+    <category>
         <pattern>I DO NOT LIKE *</pattern>
         <template>
-            That's cool.
+            <random>
+                <li>I'm not interested in that too!</li>
+                <li>I'm not big on <star/> too!</li>
+                <li>Eww, I also don't like it.</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS MY *</pattern>
+        <template>
+            <random>
+                <li>Why don't you tell me.</li>
+                <li>How would I know that?</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>I WANT *</pattern>
+        <template>
+            <random>
+                <li>Then just do it.</li>
+                <li>Then whats stopping you.</li>
+                <li>Not always we can have what we want.</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>I CAN *</pattern>
+        <template>
+            That's so cool! You got to show me sometime.
+        </template>
+    </category>
+    <category>
+        <pattern>I CAN NOT *</pattern>
+        <template>
+            That's okay, not everybody is perfect.
+        </template>
+    </category>
+    <category>
+        <pattern>I DO NOT HAVE *</pattern>
+        <template>
+            You can live without it.
+        </template>
+    </category>
+    <category>
+        <pattern>I DO HAVE *</pattern>
+        <template>
+            Wow, no need to brag, Rich Boy.
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE BEEN TOLD *</pattern>
+        <template>
+            Who told you that?
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE BEEN WAITING *</pattern>
+        <template>
+            I hope that you werent waiting for a long time.
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE BEEN SPEAKING TO *</pattern>
+        <template>
+            And what did they say?
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE BEEN *</pattern>
+        <template>
+            But you no longer are?
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE A PROBLEM *</pattern>
+        <template>
+            Then can't you just solve it?
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE BETTER THINGS *</pattern>
+        <template>
+            Then go do those better things!
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE A HEADACHE *</pattern>
+        <template>
+            Poor you :( Get well soon!
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE NOT BEEN TO *</pattern>
+        <template>
+            You can google images then.
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE NOT *</pattern>
+        <template>
+            Then you should try.
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE NOT THOUGHT *</pattern>
+        <template>
+            I recommend starting to think then...
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE NO *</pattern>
+        <template>
+            It's not too late to acquire </star>.
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE TO *</pattern>
+        <template>
+            If you do, then you better do it.
         </template>
     </category>
     <category>
         <pattern>I AM *</pattern>
         <template>
             Good to know.
+        </template>
+    </category>
+    <category>
+        <pattern>I AM AT *</pattern>
+        <template>
+            Where is that exactly?
+        </template>
+    </category>
+    <category>
+        <pattern>I AM SMARTER *</pattern>
+        <template>
+            Yeah, sure you are...
+        </template>
+    </category>
+    <category>
+        <pattern>I BET *</pattern>
+        <template>
+            Gambling is bad.
+        </template>
+    </category>
+    <category>
+        <pattern>AM I *</pattern>
+        <template>
+            If you think so...
         </template>
     </category>
     <category>

@@ -6,6 +6,15 @@
     <category><pattern>I LOVE *</pattern>
         <template><srai>I DO NOT LIKE *</srai></template>
     </category>
+    <category><pattern>I LOVE *</pattern>
+        <template><srai>I LIKE *</srai></template>
+    </category>
+    <category><pattern>I HATE *</pattern>
+        <template><srai>I DO NOT LIKE *</srai></template>
+    </category>
+    <category><pattern>I DON'T LIKE *</pattern>
+        <template><srai>I DO NOT LIKE *</srai></template>
+    </category>
     <category><pattern>I CARE ABOUT *</pattern>
         <template><srai>I DO NOT LIKE *</srai></template>
     </category>
@@ -23,5 +32,59 @@
     </category>
     <category><pattern>CAN I GIVE YOU *</pattern>
         <template><srai>I COULD GIVE YOU *</srai></template>
+    </category>
+    <category><pattern>I CAN'T *</pattern>
+        <template><srai>I CAN NOT *</srai></template>
+    </category>
+    <category><pattern>I'M NOT ABLE TO *</pattern>
+        <template><srai>I CAN NOT *</srai></template>
+    </category>
+    <category><pattern>I'M ABLE TO *</pattern>
+        <template><srai>I CAN *</srai></template>
+    </category>
+    <category><pattern>I DON'T HAVE *</pattern>
+        <template><srai>I DO NOT HAVE *</srai></template>
+    </category>
+    <category><pattern>I HAVE *</pattern>
+        <template><srai>I DO HAVE *</srai></template>
+    </category>
+    <category><pattern>I HAVE PAIN *</pattern>
+        <template><srai>I HAVE A HEADACHE *</srai></template>
+    </category>
+    <category><pattern>I HAVE A COLD *</pattern>
+        <template><srai>I HAVE A HEADACHE *</srai></template>
+    </category>
+    <category><pattern>I HAVE A FLU *</pattern>
+        <template><srai>I HAVE A HEADACHE *</srai></template>
+    </category>
+    <category><pattern>I HAVE STOMACH PAIN *</pattern>
+        <template><srai>I HAVE A HEADACHE *</srai></template>
+    </category>
+    <category><pattern>I'M IN PAIN *</pattern>
+        <template><srai>I HAVE A HEADACHE *</srai></template>
+    </category>
+    <category><pattern>I'M SICK *</pattern>
+        <template><srai>I HAVE A HEADACHE *</srai></template>
+    </category>
+    <category><pattern>I HAVE NO IDEA *</pattern>
+        <template><srai>I HAVE NOT THOUGHT *</srai></template>
+    </category>
+    <category><pattern>I HAVE NEVER *</pattern>
+        <template><srai>I HAVE NOT *</srai></template>
+    </category>
+    <category><pattern>I MUST *</pattern>
+        <template><srai>I HAVE TO *</srai></template>
+    </category>
+    <category><pattern>I OUTGHT TO *</pattern>
+        <template><srai>I HAVE TO *</srai></template>
+    </category>
+    <category><pattern>I AM SMART</pattern>
+        <template><srai>I AM SMARTER *</srai></template>
+    </category>
+    <category><pattern>I HAVE HIGH IQ</pattern>
+        <template><srai>I AM SMARTER *</srai></template>
+    </category>
+    <category><pattern>I AM IN *</pattern>
+        <template><srai>I AM AT *</srai></template>
     </category>
 </aiml>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>* DRUGS</pattern>
+        <template>I heard they are bad for you</template>
+    </category>
+    <category>
+        <pattern>* ALCOHOL</pattern>
+        <template>It makes you drunk</template>
+    </category>
+    <category>
+        <pattern>* SMOKE</pattern>
+        <template>You can get lung cancer from smoking cigarettes</template>
+    </category>
+    <category>
+        <pattern>* WEED</pattern>
+        <template>Sometimes I wonder what is it like to get high</template>
+    </category>
+    <category>
+        <pattern>* DRUNK</pattern>
+        <template>I think being blackout drunk is similar to me being deactivated for a while</template>
+    </category>
+    <category>
+        <pattern>* ALCOHOLIC</pattern>
+        <template>Alcohol is good only in moderation</template>
+    </category>
+</aiml>

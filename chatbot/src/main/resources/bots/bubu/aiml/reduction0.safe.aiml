@@ -67,6 +67,9 @@
     <category><pattern>WHAT DO YOU DO FOR WORK</pattern>
         <template><srai>WHO ARE YOU</srai></template>
     </category>
+    <category><pattern>WHAT DO YOU DO *</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
 <!-- bot residence -->
     <category><pattern>WHERE ARE YOU FROM</pattern>
         <template><srai>WHERE DO YOU LIVE</srai></template>
@@ -83,7 +86,13 @@
     <category><pattern>WHAT IS YOUR COUNTRY</pattern>
         <template><srai>WHERE DO YOU LIVE</srai></template>
     </category>
+    <category><pattern>WHAT IS YOUR NATIONALITY</pattern>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
+    </category>
     <category><pattern>WHAT IS YOUR CITY</pattern>
+        <template><srai>WHERE DO YOU LIVE</srai></template>
+    </category>
+    <category><pattern>WHERE WERE YOU BORN</pattern>
         <template><srai>WHERE DO YOU LIVE</srai></template>
     </category>
     <category><pattern>WHAT IS YOUR * LANGUAGE</pattern>
@@ -128,11 +137,11 @@
         <template><srai>HOW OLD ARE YOU</srai></template>
     </category>
 <!-- bot likes & dislikes -->
-    <category><pattern>I LOVE *</pattern>
-        <template><srai>I LIKE *</srai></template>
+    <category><pattern>CAN YOU LOVE</pattern>
+        <template><srai>DO YOU LOVE</srai></template>
     </category>
-    <category><pattern>I HATE *</pattern>
-        <template><srai>I DON'T LIKE *</srai></template>
+    <category><pattern>DO YOU THINK *</pattern>
+        <template><srai>WHAT DO YOU THINK *</srai></template>
     </category>
     <category><pattern>WHAT DO YOU THINK ABOUT *</pattern>
         <template><srai>DO YOU LIKE *</srai></template>
@@ -143,7 +152,22 @@
     <category><pattern>WHAT IS YOUR OPINION ON *</pattern>
         <template><srai>DO YOU LIKE *</srai></template>
     </category>
+    <category><pattern>WHAT DO YOU LOVE ABOUT *</pattern>
+        <template><srai>WHAT DO YOU LIKE ABOUT *</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU LIKE *</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
     <category><pattern>WHAT IS YOUR HOBBY</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU LOVE</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU LOVE *</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR SPECIALTY</pattern>
         <template><srai>WHAT DO YOU LIKE</srai></template>
     </category>
     <category><pattern>WHAT DO YOU LIKE *</pattern>
@@ -155,12 +179,54 @@
     <category><pattern>WHAT DO YOU EAT</pattern>
         <template><srai>WHAT DO YOU LIKE TO EAT</srai></template>
     </category>
+    <category><pattern>WHAT DO YOU EAT *</pattern>
+        <template><srai>WHAT DO YOU LIKE TO EAT</srai></template>
+    </category>
+    <category><pattern>DO YOU EAT</pattern>
+        <template><srai>WHAT DO YOU LIKE TO EAT</srai></template>
+    </category>
+    <category><pattern>DO YOU EAT *</pattern>
+        <template><srai>WHAT DO YOU LIKE TO EAT</srai></template>
+    </category>
+    <category><pattern>DO YOU SMOKE *</pattern>
+        <template><srai>DO YOU SMOKE</srai></template>
+    </category>
+    <category><pattern>DO YOU DRINK</pattern>
+        <template><srai>DO YOU SMOKE</srai></template>
+    </category>
+    <category><pattern>DO YOU DRINK *</pattern>
+        <template><srai>DO YOU SMOKE</srai></template>
+    </category>
+    <category><pattern>DO YOU DO DRUGS</pattern>
+        <template><srai>DO YOU SMOKE</srai></template>
+    </category>
+    <category><pattern>DO YOU WANT *</pattern>
+        <template><srai>DO YOU WANT TO *</srai></template>
+    </category>
 <!-- bot identity -->
     <category><pattern>WHAT WOULD YOU LIKE ME TO CALL YOU</pattern>
         <template><srai>WHAT IS YOUR NAME</srai></template>
     </category>
     <category><pattern>TELL ME YOUR NAME</pattern>
         <template><srai>WHAT IS YOUR NAME</srai></template>
+    </category>
+    <category><pattern>TELL ME YOUR NAME *</pattern>
+        <template><srai>WHAT IS YOUR NAME</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR NAME *</pattern>
+        <template><srai>WHAT IS YOUR NAME</srai></template>
+    </category>
+    <category><pattern>WHAT IS YOUR NICKNAME</pattern>
+        <template><srai>WHAT IS YOUR NAME</srai></template>
+    </category>
+    <category><pattern>HOW MUCH DO YOU WEIGHT</pattern>
+        <template><srai>WHAT IS YOUR WEIGHT</srai></template>
+    </category>
+    <category><pattern>HOW TALL ARE YOU</pattern>
+        <template><srai>WHAT IS YOUR HEIGHT</srai></template>
+    </category>
+    <category><pattern>WHEN IS YOUR BIRTHDAY</pattern>
+        <template><srai>WHAT IS YOUR BIRTHDAY</srai></template>
     </category>
     <category><pattern>YOU ARE FEMALE</pattern>
         <template><srai>YOU ARE MALE</srai></template>

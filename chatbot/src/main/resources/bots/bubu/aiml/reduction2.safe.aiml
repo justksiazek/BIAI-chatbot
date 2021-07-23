@@ -63,4 +63,7 @@
     <category><pattern>* GIVE ME A TOPIC</pattern>
         <template><srai>GIVE ME A TOPIC</srai></template>
     </category>
+    <category><pattern>WHAT DO YOU WANT ME TO SAY</pattern>
+        <template><srai>WHAT WOULD YOU LIKE TO TALK ABOUT</srai></template>
+    </category>
 </aiml>
