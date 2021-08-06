@@ -22,6 +22,9 @@
     <category><pattern>WHATS UP</pattern>
         <template><srai>HELLO</srai></template>
     </category>
+    <category><pattern>HOW DO YOU DO</pattern>
+        <template><srai>HOW ARE YOU</srai></template>
+    </category>
 <!-- goodbyes -->
     <category><pattern>GOOD BYE</pattern>
         <template><srai>BYE</srai></template>
@@ -69,6 +72,30 @@
     </category>
     <category><pattern>WHAT DO YOU DO *</pattern>
         <template><srai>WHO ARE YOU</srai></template>
+    </category>
+    <category><pattern>YOU MUST * LIKE YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
+    </category>
+    <category><pattern>YOU MUST ENJOY YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
+    </category>
+    <category><pattern>YOU MUST NOT LIKE YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
+    </category>
+    <category><pattern>YOU MUST NOT * LIKE YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
+    </category>
+    <category><pattern>YOU MUST NOT ENJOY YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
+    </category>
+    <category><pattern>YOU MUST NOT * ENJOY YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
+    </category>
+    <category><pattern>YOU MUST HATE YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
+    </category>
+    <category><pattern>* YOUR JOB</pattern>
+        <template><srai>YOU MUST LIKE YOUR JOB</srai></template>
     </category>
 <!-- bot residence -->
     <category><pattern>WHERE ARE YOU FROM</pattern>
@@ -152,6 +179,15 @@
     <category><pattern>WHAT IS YOUR OPINION ON *</pattern>
         <template><srai>DO YOU LIKE *</srai></template>
     </category>
+    <category><pattern>DO YOU ENJOY *</pattern>
+        <template><srai>DO YOU LIKE *</srai></template>
+    </category>
+    <category><pattern>DO YOU HATE *</pattern>
+        <template><srai>DO YOU LIKE *</srai></template>
+    </category>
+    <category><pattern>DO YOU NOT LIKE *</pattern>
+        <template><srai>DO YOU LIKE *</srai></template>
+    </category>
     <category><pattern>WHAT DO YOU LOVE ABOUT *</pattern>
         <template><srai>WHAT DO YOU LIKE ABOUT *</srai></template>
     </category>
@@ -171,6 +207,15 @@
         <template><srai>WHAT DO YOU LIKE</srai></template>
     </category>
     <category><pattern>WHAT DO YOU LIKE *</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>HOW DO YOU SPEND YOUR DAYS</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>WHAT DO YOU DO TO PASS TIME</pattern>
+        <template><srai>WHAT DO YOU LIKE</srai></template>
+    </category>
+    <category><pattern>HWHAT DO YOU DO IN YOUR FREE TIME</pattern>
         <template><srai>WHAT DO YOU LIKE</srai></template>
     </category>
     <category><pattern>WHAT IS YOUR FAVORITE FOOD</pattern>
@@ -334,5 +379,19 @@
     <category><pattern>THAT'S A LIE</pattern>
         <template><srai>YOU ARE LYING</srai></template>
     </category>
-
+    <category><pattern>WHAT DO YOU WANT TO DO</pattern>
+        <template><srai>WHAT IS YOUR SEXUAL PREFERENCE</srai></template>
+    </category>
+    <category><pattern>IS IT BORING *</pattern>
+        <template><srai>IS IT BORING</srai></template>
+    </category>
+    <category><pattern>IS IT TIRING *</pattern>
+        <template><srai>IS IT TIRING</srai></template>
+    </category>
+    <category><pattern>IS IT NICE *</pattern>
+        <template><srai>IS IT NICE</srai></template>
+    </category>
+    <category><pattern>IS IT HARD *</pattern>
+        <template><srai>IS IT HARD</srai></template>
+    </category>
 </aiml>

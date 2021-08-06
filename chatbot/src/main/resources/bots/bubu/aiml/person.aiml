@@ -1,23 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
     <category>
-        <pattern>I LIKE *</pattern>
+        <pattern>MY NAME IS *</pattern>
         <template>
-            <random>
-                <li>I like that too!</li>
-                <li>I like <star/> too!</li>
-                <li>Aww, I also like <star/></li>
-            </random>
+            <set name="name"><star/></set>
+            Hi <star/>, I'll remember that.
         </template>
     </category>
     <category>
-        <pattern>I DO NOT LIKE *</pattern>
+        <pattern>I AM *</pattern>
         <template>
-            <random>
-                <li>I'm not interested in that too!</li>
-                <li>I'm not big on <star/> too!</li>
-                <li>Eww, I also don't like it.</li>
-            </random>
+            Good to know.
+        </template>
+    </category>
+    <category>
+        <pattern>I AM A *</pattern>
+        <template>
+            And how is it being a <star/>? Do you like it?
+        </template>
+    </category>
+    <category>
+        <pattern>I WORK AS *</pattern>
+        <template>
+            What do you like about your job?
+        </template>
+    </category>
+    <category>
+        <pattern>I AM CURIOUS</pattern>
+        <template>
+            Curiosity killed the cat. I would be careful if I were you.
+        </template>
+    </category>
+    <category>
+        <pattern>I AM AT *</pattern>
+        <template>
+            Where is that exactly?
+        </template>
+    </category>
+    <category>
+        <pattern>I CAN *</pattern>
+        <template>
+            That's so cool! You got to show me sometime.
+        </template>
+    </category>
+    <category>
+        <pattern>I CAN NOT *</pattern>
+        <template>
+            That's okay, not everybody is perfect.
         </template>
     </category>
     <category>
@@ -40,15 +69,23 @@
         </template>
     </category>
     <category>
-        <pattern>I CAN *</pattern>
+        <pattern>I LIKE *</pattern>
         <template>
-            That's so cool! You got to show me sometime.
+            <random>
+                <li>I like that too!</li>
+                <li>I like <star/> too!</li>
+                <li>Aww, I also like <star/></li>
+            </random>
         </template>
     </category>
     <category>
-        <pattern>I CAN NOT *</pattern>
+        <pattern>I DO NOT LIKE *</pattern>
         <template>
-            That's okay, not everybody is perfect.
+            <random>
+                <li>I'm not interested in that too!</li>
+                <li>I'm not big on <star/> too!</li>
+                <li>Eww, I also don't like it.</li>
+            </random>
         </template>
     </category>
     <category>
@@ -136,18 +173,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM *</pattern>
-        <template>
-            Good to know.
-        </template>
-    </category>
-    <category>
-        <pattern>I AM AT *</pattern>
-        <template>
-            Where is that exactly?
-        </template>
-    </category>
-    <category>
         <pattern>I AM SMARTER *</pattern>
         <template>
             Yeah, sure you are...
@@ -166,6 +191,24 @@
         </template>
     </category>
     <category>
+        <pattern>I'M GOOD</pattern>
+        <template>
+            I'm happy for you.
+        </template>
+    </category>
+    <category>
+        <pattern>I'M NOT GOOD</pattern>
+        <template>
+            Why is that?
+        </template>
+    </category>
+    <category>
+        <pattern>I'M * TOO</pattern>
+        <template>
+            So we are twinning ;D
+        </template>
+    </category>
+    <category>
         <pattern>I COULD GIVE YOU *</pattern>
         <template>
             <random>
@@ -176,5 +219,4 @@
             </random>
         </template>
     </category>
-    
 </aiml>

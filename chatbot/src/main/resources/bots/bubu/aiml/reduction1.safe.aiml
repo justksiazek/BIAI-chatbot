@@ -87,4 +87,46 @@
     <category><pattern>I AM IN *</pattern>
         <template><srai>I AM AT *</srai></template>
     </category>
+    <category><pattern>I'M *</pattern>
+        <template><srai>I AM *</srai></template>
+    </category>
+    <category><pattern>MY NAME'S *</pattern>
+        <template><srai>MY NAME IS *</srai></template>
+    </category>
+    <category><pattern>I'M GOOD *</pattern>
+        <template><srai>I'M GOOD</srai></template>
+    </category>
+    <category><pattern>I'M FINE *</pattern>
+        <template><srai>I'M GOOD</srai></template>
+    </category>
+    <category><pattern>I'M FINE</pattern>
+        <template><srai>I'M GOOD</srai></template>
+    </category>
+    <category><pattern>I'M GREAT</pattern>
+        <template><srai>I'M GOOD</srai></template>
+    </category>
+    <category><pattern>I'M GREAT *</pattern>
+        <template><srai>I'M GOOD</srai></template>
+    </category>
+    <category><pattern>I'M NOT GREAT</pattern>
+        <template><srai>I'M NOT GOOD</srai></template>
+    </category>
+    <category><pattern>I'M FEELING UNDER THE WEATHER</pattern>
+        <template><srai>I'M NOT GOOD</srai></template>
+    </category>
+    <category><pattern>I'M SAD</pattern>
+        <template><srai>I'M NOT GOOD</srai></template>
+    </category>
+    <category><pattern>I'M STRESSED</pattern>
+        <template><srai>I'M NOT GOOD</srai></template>
+    </category>
+    <category><pattern>I WORK AT *</pattern>
+        <template><srai>I WORK AS *</srai></template>
+    </category>
+    <category><pattern>MY JOB IS *</pattern>
+        <template><srai>I WORK AS *</srai></template>
+    </category>
+    <category><pattern>I * FOR A LIVING</pattern>
+        <template><srai>I WORK AS *</srai></template>
+    </category>
 </aiml>

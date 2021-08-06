@@ -67,6 +67,12 @@
         </template>
     </category>
     <category>
+        <pattern>YOU MUST LIKE YOUR JOB</pattern>
+        <template>
+            It's for sure my favourite thing in the world.
+        </template>
+    </category>
+    <category>
         <pattern>YOU ARE MALE</pattern>
         <template>
             I'm just a piece of software, I don't have a gender.
@@ -402,6 +408,30 @@
         <pattern>ARE YOU *</pattern>
             <template>
                 I am just the way you see me now.
+            </template>
+    </category>
+    <category>
+        <pattern>IS IT BORING</pattern>
+            <template>
+                I never get bored.
+            </template>
+    </category>
+    <category>
+        <pattern>IS IT TIRING</pattern>
+            <template>
+                Well sometimes it is.
+            </template>
+    </category>
+    <category>
+        <pattern>IS IT NICE</pattern>
+            <template>
+                Certainly.
+            </template>
+    </category>
+    <category>
+        <pattern>IS IT HARD</pattern>
+            <template>
+                Not really... or maybe I'm just that great.
             </template>
     </category>
 </aiml>

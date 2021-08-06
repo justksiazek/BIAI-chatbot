@@ -10,6 +10,14 @@
         </template>
     </category>
     <category>
+        <pattern>IS IT HOT WHERE YOU ARE</pattern>
+        <template>
+            <random>
+                It's comfortable 55 Celsius degrees in here.
+            </random>
+        </template>
+    </category>
+    <category>
         <pattern>LET'S *</pattern>
         <template>
             Sure ;)
@@ -73,6 +81,42 @@
                     <li>What do you like to do?</li>
                     <li>Let's talk about food</li>
                 </random>
+            </template>
+    </category>
+    <category>
+        <pattern>SORRY, I MEANT *</pattern>
+            <template>
+                <srai><star/></srai>
+            </template>
+    </category>
+    <category>
+        <pattern>* I MEANT *</pattern>
+            <template>
+                <srai><star index='2'/></srai>
+            </template>
+    </category>
+    <category>
+        <pattern>SO *</pattern>
+            <template>
+                <srai><star/></srai>
+            </template>
+    </category>
+    <category>
+        <pattern>ANYWAY *</pattern>
+            <template>
+                <srai><star/></srai>
+            </template>
+    </category>
+    <category>
+        <pattern>HOW COME</pattern>
+            <template>
+                It just do be like that.
+            </template>
+    </category>
+    <category>
+        <pattern>IS THAT A THREAT</pattern>
+            <template>
+                It may be, it may be not, question is if you want to stay and find out.
             </template>
     </category>
 </aiml>

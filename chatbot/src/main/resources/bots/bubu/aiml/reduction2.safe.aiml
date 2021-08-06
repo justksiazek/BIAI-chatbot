@@ -66,4 +66,55 @@
     <category><pattern>WHAT DO YOU WANT ME TO SAY</pattern>
         <template><srai>WHAT WOULD YOU LIKE TO TALK ABOUT</srai></template>
     </category>
+    <category><pattern>SORRY I MEANT *</pattern>
+        <template><srai>SORRY, I MEANT *</srai></template>
+    </category>
+    <category><pattern>I MEANT *</pattern>
+        <template><srai>SORRY, I MEANT *</srai></template>
+    </category>
+    <category><pattern>I WAS MEANING *</pattern>
+        <template><srai>SORRY, I MEANT *</srai></template>
+    </category>
+    <category><pattern>I WAS MEANING TO SAY *</pattern>
+        <template><srai>SORRY, I MEANT *</srai></template>
+    </category>
+    <category><pattern>SORRY I MEANT TO SAY *</pattern>
+        <template><srai>SORRY, I MEANT *</srai></template>
+    </category>
+    <category><pattern>SORRY, I MEANT TO SAY *</pattern>
+        <template><srai>SORRY, I MEANT *</srai></template>
+    </category>
+    <category><pattern>* I WAS MEANING TO SAY *</pattern>
+        <template><srai>* I MEANT *</srai></template>
+    </category>
+    <category><pattern>* I WAS MEANING *</pattern>
+        <template><srai>* I MEANT *</srai></template>
+    </category>
+    <category><pattern>WHY</pattern>
+        <template><srai>HOW COME</srai></template>
+    </category>
+    <category><pattern>WHY THOUGH</pattern>
+        <template><srai>HOW COME</srai></template>
+    </category>
+    <category><pattern>WHY IS THAT</pattern>
+        <template><srai>HOW COME</srai></template>
+    </category>
+    <category><pattern>IS IT HOT WHERE YOU LIVE</pattern>
+        <template><srai>IS IT HOT WHERE YOU ARE</srai></template>
+    </category>
+    <category><pattern>IS IT COLD WHERE YOU LIVE</pattern>
+        <template><srai>IS IT HOT WHERE YOU ARE</srai></template>
+    </category>
+    <category><pattern>IS IT COLD WHERE YOU ARE</pattern>
+        <template><srai>IS IT HOT WHERE YOU ARE</srai></template>
+    </category>
+    <category><pattern>IS IT RAINING *</pattern>
+        <template><srai>* THE WEATHER</srai></template>
+    </category>
+    <category><pattern>IS IT SUNNY *</pattern>
+        <template><srai>* THE WEATHER</srai></template>
+    </category>
+    <category><pattern>IS IT CLOUDY *</pattern>
+        <template><srai>* THE WEATHER</srai></template>
+    </category>
 </aiml>
