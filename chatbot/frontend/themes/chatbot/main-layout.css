@@ -9,3 +9,7 @@
   margin: 0 2%;
   color: var(--lumo-tertiary-text-color);
 }
+
+.sidemenu-menu h1 {
+  margin: 20px auto;
+}

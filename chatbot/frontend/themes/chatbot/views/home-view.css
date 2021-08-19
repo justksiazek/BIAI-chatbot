@@ -1,0 +1,9 @@
+.home-view {
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-view h3 {
+    color: var(--lumo-body-text-color);
+}

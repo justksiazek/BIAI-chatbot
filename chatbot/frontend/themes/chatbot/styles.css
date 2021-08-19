@@ -1,5 +1,6 @@
 @import url('./main-layout.css');
 @import url('./views/chatbot-view.css');
+@import url('./views/home-view.css');
 @import url('lumo-css-framework/all-classes.css');
 
 html {

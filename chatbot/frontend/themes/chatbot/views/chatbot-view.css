@@ -53,3 +53,6 @@
   flex-direction: row-reverse;
 }
 
+.MessageList-gap {
+  height: 50px;
+}

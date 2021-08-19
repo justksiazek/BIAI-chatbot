@@ -1,14 +1,11 @@
 package com.example.application.views;
 
-import java.util.Optional;
-
+import com.example.application.views.home.HomeView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentUtil;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
-import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.avatar.Avatar;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -20,12 +17,12 @@ import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.TabsVariant;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
+import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.PageTitle;
-import com.example.application.views.MainLayout;
 import com.example.application.views.chatbot.ChatbotView;
 import com.vaadin.flow.theme.lumo.Lumo;
+import org.vaadin.artur.Avataaar;
 
 /**
  * The main view is a top-level placeholder for other views.
@@ -33,36 +30,42 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @CssImport("./themes/chatbot/styles.css")
 @PWA(name = "chatbot", shortName = "chatbot", enableInstallPrompt = false)
 @Theme(value = Lumo.class)
+@Route(value="")
 public class MainLayout extends AppLayout {
 
-    //private final Tabs menu;
-    private H1 viewTitle;
+    private Tabs menu = new Tabs();
+    private Tab aliceTab;
+    private Tab chattyTab;
+    private String destination = "home";
 
     public MainLayout() {
+        if(VaadinSession.getCurrent().getAttribute("freshLoad") == null) {
+            UI.getCurrent().navigate(HomeView.class);
+            UI.getCurrent().getPage().reload();
+            return;
+        }
+
         setPrimarySection(Section.DRAWER);
         addToNavbar(true, createHeaderContent());
-        //menu = createMenu();
-        //addToDrawer(createDrawerContent(menu));
+        menu = createMenu();
+        addToDrawer(createDrawerContent(menu));
     }
 
     private Component createHeaderContent() {
         HorizontalLayout layout = new HorizontalLayout();
         layout.setClassName("sidemenu-header");
-        //layout.getThemeList().set("dark", true);
         layout.setWidthFull();
         layout.setSpacing(false);
         layout.setAlignItems(FlexComponent.Alignment.CENTER);
-        //layout.add(new DrawerToggle());
+
         Icon icon = new Icon(VaadinIcon.CHAT);
         icon.setSize("50px");
         icon.setColor("white");
         layout.add(icon);
-        viewTitle = new H1("Chatbot");
+
+        H1 viewTitle = new H1("Chatbot");
         layout.add(viewTitle);
 
-        //Avatar avatar = new Avatar();
-        //avatar.addClassNames("ms-auto", "me-m");
-        //layout.add(avatar);
         return layout;
     }
 
@@ -74,49 +77,62 @@ public class MainLayout extends AppLayout {
         layout.setSpacing(false);
         layout.getThemeList().set("spacing-s", true);
         layout.setAlignItems(FlexComponent.Alignment.STRETCH);
+
         HorizontalLayout logoLayout = new HorizontalLayout();
         logoLayout.setId("logo");
         logoLayout.setAlignItems(FlexComponent.Alignment.CENTER);
-        logoLayout.add(new Image("images/logo.png", "chatbot logo"));
-        logoLayout.add(new H1("chatbot"));
+        logoLayout.add(new H1("Chatbot"));
+
         layout.add(logoLayout, menu);
+
         return layout;
     }
-/*
+
     private Tabs createMenu() {
         final Tabs tabs = new Tabs();
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         tabs.addThemeVariants(TabsVariant.LUMO_MINIMAL);
         tabs.setId("tabs");
-        tabs.add(createMenuItems());
+        final Tab tab = new Tab();
+        tab.add(new Avataaar("Home Page"));
+        tab.add(new RouterLink("Home Page", HomeView.class));
+        ComponentUtil.setData(tab, Class.class, HomeView.class);
+        tabs.add(tab);
+        tabs.add(createTab("Alice"));
+        tabs.add(createTab("Chatty"));
         return tabs;
     }
 
-    private Component[] createMenuItems() {
-        return new Tab[]{createTab("Chatbot", ChatbotView.class)};
-    }
-
-    private static Tab createTab(String text, Class<? extends Component> navigationTarget) {
+    private Tab createTab(String botName) {
         final Tab tab = new Tab();
-        tab.add(new RouterLink(text, navigationTarget));
-        ComponentUtil.setData(tab, Class.class, navigationTarget);
+        tab.add(new Avataaar(botName));
+        tab.add(new RouterLink(botName, ChatbotView.class, botName));
+        ComponentUtil.setData(tab, Class.class, ChatbotView.class);
+        if(botName.equals("Alice")) {
+            aliceTab = tab;
+        }
+        else {
+            chattyTab = tab;
+        }
         return tab;
     }
 
     @Override
     protected void afterNavigation() {
-        super.afterNavigation();
-        getTabForComponent(getContent()).ifPresent(menu::setSelectedTab);
-        viewTitle.setText(getCurrentPageTitle());
+        if(destination.equals("home")) {
+            return;
+        }
+        else {
+            destination = "bot";
+            super.afterNavigation();
+            ChatbotView view = (ChatbotView) getContent();
+            String botName = view.getBotName();
+            if(botName.equals("Alice")) {
+                menu.setSelectedTab(aliceTab);
+            }
+            else {
+                menu.setSelectedTab(chattyTab);
+            }
+        }
     }
-
-    private Optional<Tab> getTabForComponent(Component component) {
-        return menu.getChildren().filter(tab -> ComponentUtil.getData(tab, Class.class).equals(component.getClass()))
-                .findFirst().map(Tab.class::cast);
-    }
-
-    private String getCurrentPageTitle() {
-        PageTitle title = getContent().getClass().getAnnotation(PageTitle.class);
-        return title == null ? "" : title.value();
-    }*/
 }

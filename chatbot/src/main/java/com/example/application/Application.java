@@ -22,15 +22,6 @@ public class Application extends SpringBootServletInitializer {
     }
 
     @Bean
-    public Bot alice() {
-        return new Bot(BotConfiguration.builder()
-                        .name("bubu")
-                        .path("src/main/resources")
-                        .build()
-        );
-    }
-
-    @Bean
     public ScheduledExecutorService executorService() {
         return Executors.newScheduledThreadPool(2);
     }

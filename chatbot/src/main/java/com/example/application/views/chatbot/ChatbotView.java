@@ -1,70 +1,81 @@
 package com.example.application.views.chatbot;
 
 import com.example.application.model.MessageList;
-import com.vaadin.flow.component.AttachEvent;
-import com.vaadin.flow.component.Key;
-import com.vaadin.flow.component.Text;
-import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.*;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.router.*;
 import com.example.application.views.MainLayout;
-import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.shared.communication.PushMode;
 import org.alicebot.ab.Bot;
 import org.alicebot.ab.Chat;
+import org.alicebot.ab.configuration.BotConfiguration;
 import org.vaadin.artur.Avataaar;
 
-import java.util.Random;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-
-@Route(value = "chatbot", layout = MainLayout.class)
+@Route(value = "", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
 @PageTitle("Chatbot")
-public class ChatbotView extends Div {
+public class ChatbotView extends Div implements HasUrlParameter<String> {
 
     private final UI ui;
     private final MessageList messageList = new MessageList();
     private final TextField message = new TextField();
-    private final Chat chatSession;
-    private final ScheduledExecutorService executorService;
+    private Chat chatSession;
+    private Bot bot;
 
-    public ChatbotView(Bot alice, ScheduledExecutorService executorService) {
-        this.executorService = executorService;
+    public ChatbotView() {
         ui = UI.getCurrent();
-        chatSession = new Chat(alice);
-        message.setPlaceholder("Enter a message...");
+
+        message.setPlaceholder("What do you want to say?");
         message.setSizeFull();
+
         Button send = new Button(VaadinIcon.PAPERPLANE.create(), event -> sendMessage());
         send.addClickShortcut(Key.ENTER);
+
         HorizontalLayout inputLayout = new HorizontalLayout(message, send);
         inputLayout.addClassName("inputLayout");
+
         add(messageList, inputLayout);
         setSizeFull();
     }
 
     @Override
-    protected void onAttach(AttachEvent attachEvent) {
-        ui.getPushConfiguration().setPushMode(PushMode.AUTOMATIC);
-    }
+    protected void onAttach(AttachEvent attachEvent) {ui.getPushConfiguration().setPushMode(PushMode.AUTOMATIC);}
 
     private void sendMessage() {
         String text = message.getValue();
+
         if (!text.trim().isEmpty()) {
-            messageList.addMessage("You", new Avataaar("Name"), text, true);
+            messageList.addMessage("You", new Avataaar("patient"), text, true);
             message.clear();
 
-            executorService.schedule(() -> {
-                String answer = chatSession.multisentenceRespond(text);
-                ui.access(() -> messageList.addMessage(
-                        "Chatty", new Avataaar("Alice2"), answer.isEmpty() ? "..." : answer, false));
-            }, new Random().ints(1000, 3000).findFirst().getAsInt(), TimeUnit.MILLISECONDS);
+            String answer = chatSession.multisentenceRespond(text);
+            ui.access(() -> messageList.addMessage(bot.getName(), new Avataaar("chatboy"), answer, false));
         }
     }
 
+    @Override
+    public void setParameter(BeforeEvent event, String botName) {
+        if(botName.equals("Alice")) {
+            bot = new Bot(BotConfiguration.builder()
+                    .name("alice")
+                    .path("src/main/resources")
+                    .build());
+        }
+        else {
+            bot = new Bot(BotConfiguration.builder()
+                    .name("chatty")
+                    .path("src/main/resources")
+                    .build());
+        }
+        chatSession = new Chat(bot);
+        messageList.clear();
+    }
+
+    public String getBotName() {
+        return bot.getName();
+    }
 }
