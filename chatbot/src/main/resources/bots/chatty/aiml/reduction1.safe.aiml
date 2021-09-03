@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
-    <category><pattern>I LIKE *</pattern>
-        <template><srai>I DO NOT LIKE *</srai></template>
-    </category>
-    <category><pattern>I LOVE *</pattern>
-        <template><srai>I DO NOT LIKE *</srai></template>
-    </category>
     <category><pattern>I LOVE *</pattern>
         <template><srai>I LIKE *</srai></template>
     </category>
@@ -16,19 +10,19 @@
         <template><srai>I DO NOT LIKE *</srai></template>
     </category>
     <category><pattern>I CARE ABOUT *</pattern>
-        <template><srai>I DO NOT LIKE *</srai></template>
+        <template><srai>I LIKE *</srai></template>
     </category>
     <category><pattern>I DON'T CARE ABOUT *</pattern>
         <template><srai>I DO NOT LIKE *</srai></template>
     </category>
     <category><pattern>I HAVE *</pattern>
-        <template><srai>I DO NOT LIKE *</srai></template>
+        <template><srai>I DO HAVE *</srai></template>
     </category>
     <category><pattern>I DON'T HAVE *</pattern>
-        <template><srai>I DO NOT LIKE *</srai></template>
+        <template><srai>I DO NOT HAVE *</srai></template>
     </category>
     <category><pattern>I HAVE NO *</pattern>
-        <template><srai>I DO NOT LIKE *</srai></template>
+        <template><srai>I DO NOT HAVE *</srai></template>
     </category>
     <category><pattern>CAN I GIVE YOU *</pattern>
         <template><srai>I COULD GIVE YOU *</srai></template>
