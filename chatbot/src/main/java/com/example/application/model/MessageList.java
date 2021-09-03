@@ -7,19 +7,19 @@ import org.vaadin.artur.Avataaar;
 
 public class MessageList extends Div {
 
-    private Div gap = new Div();
+    private Div filler = new Div();
 
     public MessageList() {
         setClassName(getClass().getSimpleName());
-        gap.addClassName(getClass().getSimpleName() + "-gap");
-        add(gap);
+        filler.addClassName(getClass().getSimpleName() + "-gap");
+        add(filler);
     }
 
-    public void addMessage(String from, Avataaar avatar, String text, boolean isCurrentUser) {
-        Span fromContainer = new Span(new Text(from));
+    public void addMessage(String sender, Avataaar avatar, String msg, boolean isUser) {
+        Span fromContainer = new Span(new Text(sender));
         fromContainer.addClassName(getClass().getSimpleName() + "-name");
 
-        Div textContainer = new Div(new Text(text));
+        Div textContainer = new Div(new Text(msg));
         textContainer.addClassName(getClass().getSimpleName() + "-bubble");
 
         Div avatarContainer = new Div(avatar, fromContainer);
@@ -30,15 +30,15 @@ public class MessageList extends Div {
 
         add(line);
 
-        if (isCurrentUser) {
+        if (isUser) {
             line.addClassName(getClass().getSimpleName() + "-row-currentUser");
             textContainer.addClassName(getClass().getSimpleName() + "-bubble-currentUser");
         }
         line.getElement().callJsFunction("scrollIntoView");
 
-        remove(gap);
-        add(gap);
-        gap.getElement().callJsFunction("scrollIntoView");
+        remove(filler);
+        add(filler);
+        filler.getElement().callJsFunction("scrollIntoView");
     }
 
     public void clear() {

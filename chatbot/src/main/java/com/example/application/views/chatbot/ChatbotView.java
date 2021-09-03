@@ -25,6 +25,7 @@ public class ChatbotView extends Div implements HasUrlParameter<String> {
     private final TextField message = new TextField();
     private Chat chatSession;
     private Bot bot;
+    private String avatarName;
 
     public ChatbotView() {
         ui = UI.getCurrent();
@@ -49,33 +50,53 @@ public class ChatbotView extends Div implements HasUrlParameter<String> {
         String text = message.getValue();
 
         if (!text.trim().isEmpty()) {
-            messageList.addMessage("You", new Avataaar("patient"), text, true);
+            messageList.addMessage("You", new Avataaar("Student AEI"), text, true);
             message.clear();
 
             String answer = chatSession.multisentenceRespond(text);
-            ui.access(() -> messageList.addMessage(bot.getName(), new Avataaar("chatboy"), answer, false));
+            ui.access(() -> messageList.addMessage(bot.getName(), new Avataaar(avatarName), answer, false)); // sprawdzić czy działa bez ui access
         }
     }
 
     @Override
     public void setParameter(BeforeEvent event, String botName) {
-        if(botName.equals("Alice")) {
+        MainLayout.unselectTabs();
+
+        if (botName.equals("Alice")) {
+            MainLayout.aliceTab.removeClassName(MainLayout.aliceTab.getClassName());
+            MainLayout.aliceTab.setClassName("selected");
+
             bot = new Bot(BotConfiguration.builder()
-                    .name("alice")
+                    .name("Alice")
                     .path("src/main/resources")
                     .build());
+
+            avatarName = "F C";
+        }
+        else if (botName.equals("Chatty")) {
+            MainLayout.chattyTab.removeClassName(MainLayout.chattyTab.getClassName());
+            MainLayout.chattyTab.setClassName("selected");
+
+            bot = new Bot(BotConfiguration.builder()
+                    .name("Chatty")
+                    .path("src/main/resources")
+                    .build());
+
+            avatarName = "P H";
         }
         else {
+            MainLayout.clownTab.removeClassName(MainLayout.clownTab.getClassName());
+            MainLayout.clownTab.setClassName("selected");
+
             bot = new Bot(BotConfiguration.builder()
-                    .name("chatty")
+                    .name("Clown")
                     .path("src/main/resources")
                     .build());
+
+            avatarName = "clowClown";
         }
+
         chatSession = new Chat(bot);
         messageList.clear();
-    }
-
-    public String getBotName() {
-        return bot.getName();
     }
 }

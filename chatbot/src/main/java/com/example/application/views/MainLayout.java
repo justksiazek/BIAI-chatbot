@@ -34,9 +34,10 @@ import org.vaadin.artur.Avataaar;
 public class MainLayout extends AppLayout {
 
     private Tabs menu = new Tabs();
-    private Tab aliceTab;
-    private Tab chattyTab;
-    private String destination = "home";
+    public static final Tab aliceTab = new Tab();
+    public static final Tab chattyTab = new Tab();
+    public static final Tab homeTab = new Tab();
+    public static final Tab clownTab = new Tab();
 
     public MainLayout() {
         if(VaadinSession.getCurrent().getAttribute("freshLoad") == null) {
@@ -58,11 +59,6 @@ public class MainLayout extends AppLayout {
         layout.setSpacing(false);
         layout.setAlignItems(FlexComponent.Alignment.CENTER);
 
-        Icon icon = new Icon(VaadinIcon.CHAT);
-        icon.setSize("50px");
-        icon.setColor("white");
-        layout.add(icon);
-
         H1 viewTitle = new H1("Chatbot");
         layout.add(viewTitle);
 
@@ -78,61 +74,54 @@ public class MainLayout extends AppLayout {
         layout.getThemeList().set("spacing-s", true);
         layout.setAlignItems(FlexComponent.Alignment.STRETCH);
 
-        HorizontalLayout logoLayout = new HorizontalLayout();
-        logoLayout.setId("logo");
-        logoLayout.setAlignItems(FlexComponent.Alignment.CENTER);
-        logoLayout.add(new H1("Chatbot"));
+        Icon icon = new Icon(VaadinIcon.CHAT);
+        icon.setClassName("logo");
 
-        layout.add(logoLayout, menu);
+        layout.add(icon, menu);
 
         return layout;
     }
 
     private Tabs createMenu() {
-        final Tabs tabs = new Tabs();
+        Tabs tabs = new Tabs();
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         tabs.addThemeVariants(TabsVariant.LUMO_MINIMAL);
-        tabs.setId("tabs");
-        final Tab tab = new Tab();
-        tab.add(new Avataaar("Home Page"));
-        tab.add(new RouterLink("Home Page", HomeView.class));
-        ComponentUtil.setData(tab, Class.class, HomeView.class);
-        tabs.add(tab);
-        tabs.add(createTab("Alice"));
-        tabs.add(createTab("Chatty"));
+
+        homeTab.setClassName("selected");
+        homeTab.add(new Avataaar("MyHoMe"));
+        homeTab.add(new RouterLink("Home Page", HomeView.class));
+        ComponentUtil.setData(homeTab, Class.class, HomeView.class);
+        tabs.add(homeTab);
+
+        aliceTab.setClassName("unselected");
+        aliceTab.add(new Avataaar("F C"));
+        aliceTab.add(new RouterLink("Alice", ChatbotView.class, "Alice"));
+        ComponentUtil.setData(aliceTab, Class.class, ChatbotView.class);
+        tabs.add(aliceTab);
+
+        clownTab.setClassName("unselected");
+        clownTab.add(new Avataaar("clowClown"));
+        clownTab.add(new RouterLink("Clown", ChatbotView.class, "Clown"));
+        ComponentUtil.setData(clownTab, Class.class, ChatbotView.class);
+        tabs.add(clownTab);
+
+        chattyTab.setClassName("unselected");
+        chattyTab.add(new Avataaar("P H"));
+        chattyTab.add(new RouterLink("Chatty", ChatbotView.class, "Chatty"));
+        ComponentUtil.setData(chattyTab, Class.class, ChatbotView.class);
+        tabs.add(chattyTab);
+
         return tabs;
     }
 
-    private Tab createTab(String botName) {
-        final Tab tab = new Tab();
-        tab.add(new Avataaar(botName));
-        tab.add(new RouterLink(botName, ChatbotView.class, botName));
-        ComponentUtil.setData(tab, Class.class, ChatbotView.class);
-        if(botName.equals("Alice")) {
-            aliceTab = tab;
-        }
-        else {
-            chattyTab = tab;
-        }
-        return tab;
-    }
-
-    @Override
-    protected void afterNavigation() {
-        if(destination.equals("home")) {
-            return;
-        }
-        else {
-            destination = "bot";
-            super.afterNavigation();
-            ChatbotView view = (ChatbotView) getContent();
-            String botName = view.getBotName();
-            if(botName.equals("Alice")) {
-                menu.setSelectedTab(aliceTab);
-            }
-            else {
-                menu.setSelectedTab(chattyTab);
-            }
-        }
+    public static void unselectTabs() {
+        homeTab.removeClassName(homeTab.getClassName());
+        homeTab.setClassName("unselected");
+        aliceTab.removeClassName(aliceTab.getClassName());
+        aliceTab.setClassName("unselected");
+        chattyTab.removeClassName(chattyTab.getClassName());
+        chattyTab.setClassName("unselected");
+        clownTab.removeClassName(clownTab.getClassName());
+        clownTab.setClassName("unselected");
     }
 }

@@ -163,7 +163,7 @@
     <category>
         <pattern>I HAVE NO *</pattern>
         <template>
-            It's not too late to acquire </star>.
+            It's not too late to acquire <star/>.
         </template>
     </category>
     <category>
